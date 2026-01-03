@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Force Geist (via CSS var set in layout) everywhere */
+html, body, *, *::before, *::after {
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #000;
+  color: white;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}

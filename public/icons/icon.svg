@@ -1,0 +1,132 @@
+<!-- spendwise-icon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="SpendWise icon">
+  <defs>
+    <!-- Background -->
+    <radialGradient id="bgGlow" cx="30%" cy="20%" r="90%">
+      <stop offset="0%" stop-color="#0B1A14"/>
+      <stop offset="45%" stop-color="#050806"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+
+    <!-- Emerald 3D gradient -->
+    <linearGradient id="emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6FFFD3"/>
+      <stop offset="28%" stop-color="#2AF5B9"/>
+      <stop offset="55%" stop-color="#10CFA0"/>
+      <stop offset="78%" stop-color="#0B8B72"/>
+      <stop offset="100%" stop-color="#06594A"/>
+    </linearGradient>
+
+    <!-- Metallic edge -->
+    <linearGradient id="edge" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D7FFF3" stop-opacity="0.85"/>
+      <stop offset="35%" stop-color="#7CFFE0" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#0B3B30" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.35"/>
+    </linearGradient>
+
+    <!-- Soft outer shadow -->
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="12" result="blur"/>
+      <feOffset dx="0" dy="10" result="off"/>
+      <feColorMatrix in="off" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0.55 0" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Inner shadow for depth -->
+    <filter id="innerShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feFlood flood-color="#000000" flood-opacity="0.6" result="flood"/>
+      <feComposite in="flood" in2="SourceAlpha" operator="in" result="mask"/>
+      <feGaussianBlur in="mask" stdDeviation="8" result="blur"/>
+      <feOffset dx="0" dy="6" result="offsetBlur"/>
+      <feComposite in="offsetBlur" in2="SourceGraphic" operator="arithmetic" k2="-1" k3="1" result="inner"/>
+      <feMerge>
+        <feMergeNode in="inner"/>
+      </feMerge>
+    </filter>
+
+    <!-- Gloss highlight -->
+    <linearGradient id="gloss" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="35%" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Subtle noise (optional, tiny) -->
+    <filter id="noise" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="n"/>
+      <feColorMatrix in="n" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0.08 0" result="a"/>
+      <feComposite in="a" in2="SourceGraphic" operator="in" result="grain"/>
+      <feMerge>
+        <feMergeNode in="SourceGraphic"/>
+        <feMergeNode in="grain"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Rounded square base -->
+  <g filter="url(#shadow)">
+    <rect x="64" y="64" width="384" height="384" rx="96" fill="url(#bgGlow)" stroke="url(#edge)" stroke-width="6"/>
+    <rect x="78" y="78" width="356" height="356" rx="86" fill="none" stroke="#1B1F1D" stroke-opacity="0.55" stroke-width="2"/>
+
+    <!-- Inner glow ring -->
+    <rect x="86" y="86" width="340" height="340" rx="82"
+      fill="none"
+      stroke="#2AF5B9"
+      stroke-opacity="0.22"
+      stroke-width="6"/>
+
+    <!-- 3D "S" mark -->
+    <g filter="url(#innerShadow)">
+      <!-- Back plate (depth) -->
+      <path
+        d="M320 178c0-18-12-32-34-38-20-6-43-7-64-6-43 2-76 23-76 62 0 21 11 35 30 44 18 9 41 13 63 17 16 3 34 7 46 13 12 6 18 14 18 27 0 24-24 36-52 38-31 2-63-7-86-23"
+        fill="none"
+        stroke="#04261E"
+        stroke-opacity="0.85"
+        stroke-width="44"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        transform="translate(10 10)"/>
+
+      <!-- Main S stroke -->
+      <path
+        d="M320 178c0-18-12-32-34-38-20-6-43-7-64-6-43 2-76 23-76 62 0 21 11 35 30 44 18 9 41 13 63 17 16 3 34 7 46 13 12 6 18 14 18 27 0 24-24 36-52 38-31 2-63-7-86-23"
+        fill="none"
+        stroke="url(#emerald)"
+        stroke-width="44"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+    </g>
+
+    <!-- Highlight stroke -->
+    <path
+      d="M314 170c-3-12-13-20-29-25-18-5-39-6-58-5-37 2-66 19-66 51 0 15 8 25 22 32 16 8 36 11 56 15 18 3 38 8 52 15"
+      fill="none"
+      stroke="#E9FFF7"
+      stroke-opacity="0.38"
+      stroke-width="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"/>
+
+    <!-- Top gloss -->
+    <path d="M104 128c26-28 64-44 108-44h88c50 0 92 18 118 50v18c-24-28-62-46-110-46h-96c-44 0-78 12-108 34z"
+      fill="url(#gloss)"/>
+
+    <!-- Tiny grain for premium feel -->
+    <g filter="url(#noise)">
+      <rect x="64" y="64" width="384" height="384" rx="96" fill="transparent"/>
+    </g>
+  </g>
+</svg>

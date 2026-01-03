@@ -1,0 +1,39 @@
+{
+  "name": "spendwise-finance-pwa",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@react-pdf/renderer": "^4.3.2",
+    "date-fns": "^4.1.0",
+    "dexie": "^4.0.8",
+    "dexie-react-hooks": "^1.1.7",
+    "docx": "^9.5.1",
+    "docxtemplater": "^3.67.6",
+    "geist": "^1.5.1",
+    "mammoth": "^1.11.0",
+    "next": "^16.1.1",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^5.4.530",
+    "pizzip": "^3.2.0",
+    "playwright": "^1.57.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "recharts": "^2.12.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.27",
+    "@types/pdfkit": "^0.17.4",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3"
+  }
+}
