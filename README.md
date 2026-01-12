@@ -17,9 +17,6 @@ SpendWise is built for fast, accurate monthly decision-making. Pick a month and 
 - Safe weekly/monthly spending estimates
 - PDF export for reporting
 
-> Dashboard screenshot  
-> Save your screenshot as `public/dashboard.png` to show it below.
-
 ![SpendWise Dashboard](./public/dashboard.png)
 
 ---
